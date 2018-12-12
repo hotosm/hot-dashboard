@@ -66,10 +66,10 @@ class CapacityBuildingContent extends Component {
                 <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
                   {/* Organizations supported */}
                   <Grid item xs={12} sm={6} md={3}>
-                    {this.props.importedData.dummyproject.capacitybuilding.nborganizations &&
-                    (<WidgetIndicator title={this.props.importedData.dummyproject.capacitybuilding.nborganizations.title}
+                    {this.props.importedData.pdc.capacitybuilding.nborganizations &&
+                    (<WidgetIndicator title={this.props.importedData.pdc.capacitybuilding.nborganizations.title}
                                       img={mapIMG}
-                                      data={this.props.importedData.dummyproject.capacitybuilding.nborganizations.data.length}/>)}
+                                      data={this.props.importedData.pdc.capacitybuilding.nborganizations.data.length}/>)}
                   </Grid>
 
                 </Grid>
@@ -78,8 +78,8 @@ class CapacityBuildingContent extends Component {
                 <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
                   {/* Number of attendees monthly */}
                   <Grid item xs={12} sm={6} md={4}>
-                    {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesMonthly &&
-                    (<WidgetGraph title = {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesMonthly.title}
+                    {this.props.importedData.pdc.capacitybuilding.nbAttendeesMonthly &&
+                    (<WidgetGraph title = {this.props.importedData.pdc.capacitybuilding.nbAttendeesMonthly.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
                                         style = {{ tickLabels: { padding: 20 } }}
@@ -89,9 +89,10 @@ class CapacityBuildingContent extends Component {
                                         style = {{ tickLabels: { padding: 20 } }}
                                     />
                                     {<VictoryBar
+                                        barRatio={0.5}
                                         labelComponent={<VictoryTooltip/>}
                                         style  = {{ data: { fill: "#D73F3F" } }}
-                                        data   = {tableToData(this.props.importedData.dummyproject.capacitybuilding.nbAttendeesMonthly.data, "people trained", "value")}
+                                        data   = {tableToData(this.props.importedData.pdc.capacitybuilding.nbAttendeesMonthly.data, "people trained", "value")}
                                     />}
                                   </VictoryChart>
                                   }/>
@@ -101,45 +102,46 @@ class CapacityBuildingContent extends Component {
 
                   {/* Number of attendees trained per institutions */}
                   <Grid item xs={12} sm={6} md={4}>
-                    {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesInstitutions &&
-                    (<WidgetGraph title = {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesInstitutions.title}
+                    {this.props.importedData.pdc.capacitybuilding.nbAttendeesInstitutions &&
+                    (<WidgetGraph title = {this.props.importedData.pdc.capacitybuilding.nbAttendeesInstitutions.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
-                                        style={{ tickLabels: { padding: 20 } }}
+                                        style={{ tickLabels: { padding: 20, angle: 315, verticalAnchor: "middle" } }}
                                     />
                                     <VictoryAxis
                                         dependentAxis
                                     />
-                                    {<VictoryBar horizontal
+                                    {<VictoryBar vertical
                                                  labelComponent={<VictoryTooltip/>}
                                                  style  = {{ data: { fill: "#D73F3F" } }}
-                                                 data   = {tableToData(this.props.importedData.dummyproject.capacitybuilding.nbAttendeesInstitutions.data, "attendees", "value", "data")}
+                                                 data   = {tableToData(this.props.importedData.pdc.capacitybuilding.nbAttendeesInstitutions.data, "attendees", "value", "data")}
                                     />}
                                   </VictoryChart>}
-                                  data = {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesInstitutions.data}
+                                  data = {this.props.importedData.pdc.capacitybuilding.nbAttendeesInstitutions.data}
                         />
 
                     )}
                   </Grid>
 
-                  {/* Number of attendees trained per institutions */}
-                  <Grid item xs={12} sm={6} md={4}>
-                    {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesTraining &&
-                    (<WidgetGraph title = {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesTraining.title}
+                     {/* Number of attendees trained per institutions */}
+                     <Grid item xs={12} sm={6} md={4}>
+                    {this.props.importedData.pdc.capacitybuilding.nbAttendeesTraining &&
+                    (<WidgetGraph title = {this.props.importedData.pdc.capacitybuilding.nbAttendeesTraining.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
-                                        style={{ tickLabels: { padding: 20 } }}
+                                        style={{ tickLabels: { padding: 20, angle: 315, verticalAnchor: "middle" } }}
                                     />
                                     <VictoryAxis
                                         dependentAxis
                                     />
                                     {<VictoryBar
+                                        barRatio={0.5}
                                         labelComponent={<VictoryTooltip/>}
                                         style  = {{ data: { fill: "#D73F3F" } }}
-                                        data   = {tableToData(this.props.importedData.dummyproject.capacitybuilding.nbAttendeesTraining.data, "trainings", "value")}
+                                        data   = {tableToData(this.props.importedData.pdc.capacitybuilding.nbAttendeesTraining.data, "trainings", "value")}
                                     />}
                                   </VictoryChart>}
-                                  data = {this.props.importedData.dummyproject.capacitybuilding.nbAttendeesTraining.data}
+                                  data = {this.props.importedData.pdc.capacitybuilding.nbAttendeesTraining.data}
                         />
 
                     )}
@@ -147,8 +149,8 @@ class CapacityBuildingContent extends Component {
 
                   {/* Number of workshops per month */}
                   <Grid item xs={12} sm={6} md={4}>
-                    {this.props.importedData.dummyproject.capacitybuilding.nbWorkshopsMonthly &&
-                    (<WidgetGraph title = {this.props.importedData.dummyproject.capacitybuilding.nbWorkshopsMonthly.title}
+                    {this.props.importedData.pdc.capacitybuilding.nbWorkshopsMonthly &&
+                    (<WidgetGraph title = {this.props.importedData.pdc.capacitybuilding.nbWorkshopsMonthly.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
                                         style={{ tickLabels: { padding: 20 } }}
@@ -157,9 +159,10 @@ class CapacityBuildingContent extends Component {
                                         dependentAxis
                                     />
                                     <VictoryBar
+                                        barRatio={0.5}
                                         labelComponent={<VictoryTooltip/>}
                                         style  = {{ data: { fill: "#D73F3F" } }}
-                                        data   = {tableToData(this.props.importedData.dummyproject.capacitybuilding.nbWorkshopsMonthly.data, "workshops", "value")}
+                                        data   = {tableToData(this.props.importedData.pdc.capacitybuilding.nbWorkshopsMonthly.data, "workshops", "value")}
                                     />
                                   </VictoryChart>}
                         />

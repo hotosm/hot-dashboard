@@ -67,19 +67,19 @@ class CommunityContent extends Component {
           <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
             {/* Events conducted */}
             <Grid item xs={12} sm={6} md={3}>
-              {this.props.importedData.dummyproject.community.nbEvents &&
-              (<WidgetIndicator title={this.props.importedData.dummyproject.community.nbEvents.title}
+              {this.props.importedData.pdc.community.nbEvents &&
+              (<WidgetIndicator title={this.props.importedData.pdc.community.nbEvents.title}
                                 img={mapathonsIMG}
-                                data={this.props.importedData.dummyproject.community.nbEvents.value}/>)}
-            </Grid>
+                                data={this.props.importedData.pdc.community.nbEvents.value}/>)}
+            </Grid> 
           </Grid>
 
           {/* Second row */}
           <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
             {/* Number of people participating in an event */}
             <Grid item xs={12} sm={6} md={4}>
-              {this.props.importedData.dummyproject.community.nbParticipantsGender &&
-              (<WidgetGraph title = {this.props.importedData.dummyproject.community.nbParticipantsGender.title}
+              {this.props.importedData.pdc.community.nbParticipantsGender &&
+              (<WidgetGraph title = {this.props.importedData.pdc.community.nbParticipantsGender.title}
                             graph = {<VictoryChart domainPadding={18}>
                               <VictoryAxis
                                   style={{ tickLabels: { padding: 20 } }}
@@ -91,12 +91,12 @@ class CommunityContent extends Component {
                                 <VictoryBar
                                     labelComponent={<VictoryTooltip/>}
                                     style  = {{ data: { fill: "#D73F3F" } }}
-                                    data   = {tableToData(this.props.importedData.dummyproject.community.nbParticipantsGender.data, "women participants", "female")}
+                                    data   = {tableToData(this.props.importedData.pdc.community.nbParticipantsGender.data, "women participants", "female")}
                                 />
                                 <VictoryBar
                                     labelComponent={<VictoryTooltip/>}
                                     style  = {{ data: { fill: "#FAA71E" } }}
-                                    data   = {tableToData(this.props.importedData.dummyproject.community.nbParticipantsGender.data, "men participants", "male")}
+                                    data   = {tableToData(this.props.importedData.pdc.community.nbParticipantsGender.data, "men participants", "male")}
                                 />
                               </VictoryStack>
                             </VictoryChart>
@@ -106,8 +106,8 @@ class CommunityContent extends Component {
 
             {/* Number of people participating in an event */}
             <Grid item xs={12} sm={6} md={4}>
-              {this.props.importedData.dummyproject.community.nbParticipantsNew &&
-              (<WidgetGraph title = {this.props.importedData.dummyproject.community.nbParticipantsNew.title}
+              {this.props.importedData.pdc.community.nbParticipantsNew &&
+              (<WidgetGraph title = {this.props.importedData.pdc.community.nbParticipantsNew.title}
                             graph = {<VictoryChart domainPadding={18}>
                               <VictoryAxis
                                   style={{ tickLabels: { padding: 20 } }}
@@ -119,12 +119,12 @@ class CommunityContent extends Component {
                                 <VictoryBar
                                     labelComponent={<VictoryTooltip/>}
                                     style  = {{ data: { fill: "#D73F3F" } }}
-                                    data   = {tableToData(this.props.importedData.dummyproject.community.nbParticipantsNew.data, "new participants", "new")}
+                                    data   = {tableToData(this.props.importedData.pdc.community.nbParticipantsNew.data, "new participants", "new")}
                                 />
                                 <VictoryBar
                                     labelComponent={<VictoryTooltip/>}
                                     style  = {{ data: { fill: "#FAA71E" } }}
-                                    data   = {tableToData(this.props.importedData.dummyproject.community.nbParticipantsNew.data, "old participants", "old")}
+                                    data   = {tableToData(this.props.importedData.pdc.community.nbParticipantsNew.data, "old participants", "old")}
                                 />
                               </VictoryStack>
                             </VictoryChart>
@@ -134,8 +134,8 @@ class CommunityContent extends Component {
 
                 {/* Number of people participating in an event aggregated by training type */}
                 <Grid item xs={12} sm={6} md={4}>
-                  {this.props.importedData.dummyproject.community.nbParticipantsType &&
-                  (<WidgetGraph title = {this.props.importedData.dummyproject.community.nbParticipantsType.title}
+                  {this.props.importedData.pdc.community.nbParticipantsType &&
+                  (<WidgetGraph title = {this.props.importedData.pdc.community.nbParticipantsType.title}
                                 graph = {<VictoryChart domainPadding={15}>
                                   <VictoryAxis
                                       style={{ tickLabels: { padding: 30 } }}
@@ -146,7 +146,7 @@ class CommunityContent extends Component {
                                   <VictoryBar
                                       labelComponent={<VictoryTooltip/>}
                                       style  = {{ data: { fill: "#D73F3F" } }}
-                                      data   = {tableToData(this.props.importedData.dummyproject.community.nbParticipantsType.data, "participants", "value")}
+                                      data   = {tableToData(this.props.importedData.pdc.community.nbParticipantsType.data, "participants", "value")}
                                   />
                                 </VictoryChart>
                                 }/>
