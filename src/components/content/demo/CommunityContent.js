@@ -63,13 +63,8 @@ class CommunityContent extends Component {
                                                               img={mapathonsIMG}
                                                               data={42}/>)}
               </Grid>
-            </Grid>
-            {/* En of the first row */}
-
-            {/* Second row */}
-            <Grid container spacing={24} className="content-row">
-              {/* Bar diagram example */}
-              <Grid item xs={12} sm={6} md={4}>
+                            {/* Bar diagram example */}
+                            <Grid item xs={12} sm={6} md={4}>
                 {this.props.importedData.global.capacitybuilding.attendeesAndInstitutions &&
                 (<WidgetGraph title = "Bar diagram example"
                               graph = {<VictoryChart domainPadding={15}>
@@ -106,6 +101,12 @@ class CommunityContent extends Component {
 
                 )}
               </Grid>
+
+            </Grid>
+            {/* End of the first row */}
+
+            {/* Second row */}
+            <Grid container spacing={24} className="content-row">
 
               {/* Custom widget */}
               <Grid item xs={12} sm={6} md={4}>

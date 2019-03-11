@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 /** CSS **/
 import '../../../assets/css/Custom.css';
-
+ 
 /** Logos **/
 import mapIMG from "../../../assets/images/logos/map.png";
 

@@ -15,7 +15,7 @@
 
 
 /*------------------------------------------------------------------------//
-//------------------------------- Widgets --------------------------------//
+//------------------------------- Widget --------------------------------//
 //------------------------------------------------------------------------*/
 /** External widgets **/
 .widget-container {
@@ -48,3 +48,13 @@
     padding          : 10px;
     background-color : #E1E0E0;
 }
+
+/* Code added by Varun Bhandia */
+/* Will change the properties on mobile */
+@media screen and (max-width: 600px) {
+    .widget-container {
+        height: auto !important;
+    }
+  }
+
+/* Code ended */
