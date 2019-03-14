@@ -20,6 +20,7 @@ class Header extends Component {
       anchorProject              : null,
       selectedProject : 'Global'
     };
+    this.baseURL = 'http://localhost:3000/'
   }
 
   //------------------------------------------------------------------------//
@@ -48,14 +49,16 @@ class Header extends Component {
 
   /** When a project is selected in the menu **/
   selectProjectFromMiniMenu = (projectName) => () => {
+
     // Close the mini menu
     this.setState({
       anchorProject   : null,
       selectedProject : projectName
     });
-
     // Sending the project
     this.props.sendToHome(projectName)
+    // Pushing the project name in the URL without refresh 
+    window.history.pushState("object", "Title", projectName);
   };
 
   //------------------------------------------------------------------------//
