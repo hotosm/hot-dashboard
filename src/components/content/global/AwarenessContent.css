@@ -1,0 +1,50 @@
+/*------------------------------------------------------------------------//
+//------------------------------- Content --------------------------------//
+//------------------------------------------------------------------------*/
+/** General contents div **/
+.content-row {
+    display      : flex;
+    text-align   : center;
+    padding      : 0 !important;
+}
+
+/** Grid contents div **/
+.grid-item {
+    padding      : 0 !important;
+}
+
+
+/*------------------------------------------------------------------------//
+//------------------------------- Widgets --------------------------------//
+//------------------------------------------------------------------------*/
+/** External widgets **/
+.widget-container {
+    display       : flex;
+    height: 460px;
+    margin: 40px 20px 0px;
+}
+.widget-text{
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    text-align      : center;
+    margin          : 0 auto;
+    padding         : 16px 10px 10px;
+}
+/** 'Mapped elements' div **/
+.widget-mappedElements-text{
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-evenly;
+    width           : 100%;
+    margin-top      : 10px;
+}
+.widget-mappedElements-text-item-green{
+    padding          : 10px;
+    background-color : #D73F3F;
+    color            : white;
+}
+.widget-mappedElements-text-item-grey{
+    padding          : 10px;
+    background-color : #E1E0E0;
+}
