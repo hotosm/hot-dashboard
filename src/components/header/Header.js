@@ -56,6 +56,7 @@ class Header extends Component {
 
     // Sending the project
     this.props.sendToHome(projectName)
+    window.history.pushState("object", "Title", projectName); //This will enchance the url without refresh
   };
 
   //------------------------------------------------------------------------//
