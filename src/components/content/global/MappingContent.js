@@ -179,7 +179,7 @@ class MappingContent extends Component {
                     (<WidgetGraph title = {this.props.importedData.global.main.totalNbAttendeesTraining.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
-                                        style={{ tickLabels: { padding: 20 } }}
+                                        style={{ tickLabels: { padding: 20, angle: 315, verticalAnchor: "middle" } }}
                                     />
                                     <VictoryAxis
                                         dependentAxis

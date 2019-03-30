@@ -58,16 +58,16 @@ class MappingContent extends Component {
 
     return (
         <div style={{ padding: 12 }}>
-          {this.props.importedData.dummyproject &&
+          {this.props.importedData.pdc &&
           (
               <div>
-              {/* First row */}
+                {/* First row */}
                 <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
                   {/* Map edits */}
                   <Grid item xs={12} sm={6} md={3}>
-                    {this.props.importedData.dummyproject.mapping.edits && (<WidgetIndicator title={this.props.importedData.dummyproject.mapping.edits.title}
+                    {this.props.importedData.pdc.mapping.edits && (<WidgetIndicator title={this.props.importedData.pdc.mapping.edits.title}
                                                                                          img={mapIMG}
-                                                                                         data={this.props.importedData.dummyproject.mapping.edits.data}/>)}
+                                                                                         data={this.props.importedData.pdc.mapping.edits.data}/>)}
                   </Grid>
                 </Grid>
 
@@ -75,8 +75,8 @@ class MappingContent extends Component {
                 <Grid container spacing={24} className="content-row">  {/* Spacing = space between cards */}
                   {/* Number of sub-wards complete */}
                   <Grid item xs={12} sm={6} md={4}>
-                    {this.props.importedData.dummyproject.mapping.nbSubwardsCompleted &&
-                    (<WidgetGraph title = {this.props.importedData.dummyproject.mapping.nbSubwardsCompleted.title}
+                    {this.props.importedData.pdc.mapping.nbSubwardsCompleted &&
+                    (<WidgetGraph title = {this.props.importedData.pdc.mapping.nbSubwardsCompleted.title}
                                   graph = {<VictoryChart domainPadding={15}>
                                     <VictoryAxis
                                         style={{ tickLabels: { padding: 20, angle: -0 } }}
@@ -88,10 +88,10 @@ class MappingContent extends Component {
                                         barRatio={5}
                                         labelComponent={<VictoryTooltip/>}
                                         style  = {{ data: { fill: "#D73F3F" } }}
-                                        data   = {tableToData(this.props.importedData.ramanihuria.mapping.nbSubwardsCompleted.data, "sub-wards completed", "value")}
+                                        data   = {tableToData(this.props.importedData.pdc.mapping.nbSubwardsCompleted.data, "sub-wards completed", "value")}
                                     />
-                                  </VictoryChart>}
-                        />
+                                  </VictoryChart>
+                                  }/>
                     )}
                   </Grid>
                 </Grid>
