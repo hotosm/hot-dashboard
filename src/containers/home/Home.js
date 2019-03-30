@@ -99,14 +99,36 @@ class Home extends React.Component {
     this.setState({
       loading: true
     });
-    import('../../components/content/'+projectSelected+'/MappingContent')
-      .then((res) => this.setState({MappingContent : res.default}));
-    import('../../components/content/'+projectSelected+'/CapacityBuildingContent')
-      .then((res) => this.setState({CapacityBuildingContent : res.default}));
-    import('../../components/content/'+projectSelected+'/AwarenessContent')
-      .then((res) => this.setState({AwarenessContent : res.default}));
-    import('../../components/content/'+projectSelected+'/CommunityContent')
-      .then((res) => this.setState({CommunityContent : res.default}));
+    var AwarenessCheck =JSON.stringify(this.state.importedData[this.state.importedData.projectNames[selectedProjectFromHeader]].awareness);
+    var MappingCheck =JSON.stringify(this.state.importedData[this.state.importedData.projectNames[selectedProjectFromHeader]].mapping);
+    var CapacitybuildingCheck =JSON.stringify(this.state.importedData[this.state.importedData.projectNames[selectedProjectFromHeader]].capacitybuilding);
+    var CommunityCheck =JSON.stringify(this.state.importedData[this.state.importedData.projectNames[selectedProjectFromHeader]].community);
+
+    if (MappingCheck !== "{}") {
+      import('../../components/content/' + projectSelected + '/MappingContent')
+        .then((res) => this.setState({
+          MappingContent: res.default
+        }));
+    }
+    if (CapacitybuildingCheck !== "{}") {
+      import('../../components/content/' + projectSelected + '/CapacityBuildingContent')
+        .then((res) => this.setState({
+          CapacityBuildingContent: res.default
+        }));
+    }
+    if (AwarenessCheck !== "{}") {
+      import('../../components/content/' + projectSelected + '/AwarenessContent')
+        .then((res) => this.setState({
+          AwarenessContent: res.default
+        }));
+    }
+    if (CommunityCheck !== "{}") {
+      import('../../components/content/' + projectSelected + '/CommunityContent')
+        .then((res) => this.setState({
+          CommunityContent: res.default
+        }));
+    }
+
     projectSelected === "global" ?
       this.setState({
         contentName                     : 'Main',
