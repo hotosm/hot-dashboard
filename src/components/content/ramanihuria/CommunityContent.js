@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 /** CSS **/
-import './CapacityBuildingContent.css';
+import '../../../assets/css/Custom.css';
 
 /** Logos **/
 import mapathonsIMG from "../../../assets/images/logos/mapathons.png";
