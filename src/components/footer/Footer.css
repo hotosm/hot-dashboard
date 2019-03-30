@@ -109,11 +109,11 @@
     padding: 40px 0 0;
   }
   .site-footer .social-links {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .footer-body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 40px;
   }
 }

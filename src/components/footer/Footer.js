@@ -13,24 +13,16 @@ class Footer extends Component {
         <footer className="site-footer">
           <div className="footer-body">
             <div className="footer-logos footer-group">
-              <a className="footer-logo guidestar" href="https://www.guidestar.org/profile/27-3166713"><img src="https://www.hotosm.org/images/guideStarSeal_2017_platinum_SM.svg" alt="guidestar logo"/></a>
+            <a className="footer-logo guidestar" href="https://www.guidestar.org/profile/27-3166713"><img src="https://www.hotosm.org/images/guideStarSeal_2017_platinum_SM.svg" alt="guidestar logo"/></a>
+
             </div>
-            <nav className="footer-nav footer-group">
-              <div className="nav-group">
+            <div className="footer-logos footer-group">
+
+            <div className="nav-group">
                 <a href="https://www.hotosm.org/what-we-do">What we do</a>
                 <a href="https://www.hotosm.org/our-work">Our work</a>
                 <a href="https://www.hotosm.org/tools-and-data">Tools & Data</a>
                 <a href="https://www.hotosm.org/updates">News</a>
-              </div>
-              <div className="nav-group">
-                <a href="https://www.hotosm.org/community">Community & Organization</a>
-                <a href="https://www.hotosm.org/partners">Partner with us</a>
-                <a href="https://www.hotosm.org/get-involved">Get Involved</a>
-              </div>
-              <div className="nav-group">
-                <a href="https://www.hotosm.org/contact">Contact</a>
-                <a href="https://www.hotosm.org/jobs">Jobs</a>
-                <a href="https://www.hotosm.org/code-of-conduct">Code of conduct</a>
               </div>
               <ul className="social-links">
                 <li><a href="https://twitter.com/hotosm">
@@ -68,12 +60,28 @@ class Footer extends Component {
                   </svg>
                   <span>Instagram</span></a></li>
               </ul>
+
+            </div>
+            <nav className="footer-nav footer-group">
+              
+              <div className="nav-group">
+                <a href="https://www.hotosm.org/community">Community & Organization</a>
+                <a href="https://www.hotosm.org/partners">Partner with us</a>
+                <a href="https://www.hotosm.org/get-involved">Get Involved</a>
+              </div>
+              <div className="nav-group">
+                <a href="https://www.hotosm.org/contact">Contact</a>
+                <a href="https://www.hotosm.org/jobs">Jobs</a>
+                <a href="https://www.hotosm.org/code-of-conduct">Code of conduct</a>
+              </div>
+
             </nav>
             <div className="footer-options footer-group">
               <div className="footer-donate">
                 <h4>Support our work</h4>
                 <a href="https://www.hotosm.org/donate" className="btn btn-info btn-block btn-chevron btn-lg">Donate</a>
               </div>
+
             </div>
           </div>
           <div className="footer-copyright">
