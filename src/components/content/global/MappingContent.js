@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 /** CSS **/
-import './MappingContent.css';
+import '../../../assets/css/Custom.css';
 
 /** Logos **/
 import mapIMG        from '../../../assets/images/logos/map.png';
