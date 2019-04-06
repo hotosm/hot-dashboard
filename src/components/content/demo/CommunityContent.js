@@ -70,7 +70,7 @@ class CommunityContent extends Component {
             <Grid container spacing={24} className="content-row">
               {/* Bar diagram example */}
               <Grid item xs={12} sm={6} md={4}>
-                {this.props.importedData.global.capacitybuilding.attendeesAndInstitutions &&
+                {this.props.importedData &&
                 (<WidgetGraph title = "Bar diagram example"
                               graph = {<VictoryChart domainPadding={15}>
                                 <VictoryAxis
@@ -82,6 +82,9 @@ class CommunityContent extends Component {
                                 {<VictoryBar
                                   labelComponent={<VictoryTooltip/>}
                                   style  = {{ data: { fill: "#D73F3F" } }}
+                                  // The data should be an array and each diagram differs in the attributes
+                                  // You can use the function "tableToData" in the MappingContent file from global
+                                  // https://formidable.com/open-source/victory/docs/
                                   data   = {[
                                     { x: "Jan 2015",
                                       y: 12,
@@ -106,6 +109,7 @@ class CommunityContent extends Component {
 
                 )}
               </Grid>
+
 
               {/* Custom widget */}
               <Grid item xs={12} sm={6} md={4}>
