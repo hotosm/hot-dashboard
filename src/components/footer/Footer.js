@@ -10,27 +10,24 @@ import './Footer.css';
 class Footer extends Component {
   render() {
     return (
+      
         <footer className="site-footer">
           <div className="footer-body">
             <div className="footer-logos footer-group">
-              <a className="footer-logo guidestar" href="https://www.guidestar.org/profile/27-3166713"><img src="https://www.hotosm.org/images/guideStarSeal_2017_platinum_SM.svg" alt="guidestar logo"/></a>
+            <a className="footer-logo guidestar" href="https://www.guidestar.org/profile/27-3166713"><img src="https://www.hotosm.org/images/guideStarSeal_2017_platinum_SM.svg" alt="guidestar logo"/></a>
+
             </div>
-            <nav className="footer-nav footer-group">
-              <div className="nav-group">
+            <div className="footer-logos footer-group">
+
+            <div className="nav-group">
                 <a href="https://www.hotosm.org/what-we-do">What we do</a>
                 <a href="https://www.hotosm.org/our-work">Our work</a>
                 <a href="https://www.hotosm.org/tools-and-data">Tools & Data</a>
                 <a href="https://www.hotosm.org/updates">News</a>
-              </div>
-              <div className="nav-group">
                 <a href="https://www.hotosm.org/community">Community & Organization</a>
                 <a href="https://www.hotosm.org/partners">Partner with us</a>
                 <a href="https://www.hotosm.org/get-involved">Get Involved</a>
-              </div>
-              <div className="nav-group">
-                <a href="https://www.hotosm.org/contact">Contact</a>
-                <a href="https://www.hotosm.org/jobs">Jobs</a>
-                <a href="https://www.hotosm.org/code-of-conduct">Code of conduct</a>
+
               </div>
               <ul className="social-links">
                 <li><a href="https://twitter.com/hotosm">
@@ -48,7 +45,6 @@ class Footer extends Component {
                           transform="translate(-24)"/>
                   </svg>
                   <span>Facebook</span></a></li>
-
                 <li><a href="https://www.youtube.com/user/hotosm">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
                     <path fill="#D73F3F" fillRule="evenodd"
@@ -56,7 +52,6 @@ class Footer extends Component {
                           transform="translate(.144)"/>
                   </svg>
                   <span>YouTube</span></a></li>
-
                 <li><a href="https://www.instagram.com/themissingmaps/">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                     <g fill="#D73F3F" fillRule="evenodd">
@@ -68,12 +63,36 @@ class Footer extends Component {
                   </svg>
                   <span>Instagram</span></a></li>
               </ul>
+
+            </div>
+            <div className="footer-logos footer-group">
+
+            <div className="nav-group">
+                <a href="https://www.hotosm.org/contact">Contact</a>
+                <a href="https://www.hotosm.org/contact#media">Media Kit</a>
+                <a href="https://www.hotosm.org/jobs">jobs</a>
+                <a href="https://www.hotosm.org/privacy">Privacy Policy</a>
+              </div>
+              </div>
+
+            <nav className="footer-nav footer-group">
+            <div className="nav-group">
+                <a href="https://github.com/hotosm/hotosm-website/tree/gh-pages/downloads">ARTICLES OF INCORPORATION</a>
+                <a href="https://github.com/hotosm/hotosm-website/tree/gh-pages/downloads">BYLAWS</a>
+                <a href="https://www.hotosm.org/code-of-conduct">CODE OF CONDUCT</a>
+              </div>
+              <div className="nav-group">
+                <a href="https://www.hotosm.org/docs">Site Login & Documentation</a>
+                <a href="https://status.hotosm.org/">status</a>
+              </div>
+
             </nav>
             <div className="footer-options footer-group">
               <div className="footer-donate">
                 <h4>Support our work</h4>
                 <a href="https://www.hotosm.org/donate" className="btn btn-info btn-block btn-chevron btn-lg">Donate</a>
               </div>
+
             </div>
           </div>
           <div className="footer-copyright">
