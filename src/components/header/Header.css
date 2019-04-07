@@ -71,8 +71,11 @@
 
 @media (max-width: 1022px) {
   .nav-secondary .tagline {
+    text-align: center;
+    font-size: 2rem;  
     bottom: 30px;
     right: 24px;
+    margin: 20px 0px 20px 9px;
   }
   .nav-secondary .nav-item-donate {
     display: block;
@@ -97,11 +100,8 @@
 }
 
 .nav-secondary .tagline {
-  text-align: center;
-  font-size: 2rem;
   color: #D73F3F;
   opacity: .85;
-  margin: 20px 0px 20px 9px;
 }
 
 .nav-secondary .nav-item-donate {
