@@ -43,3 +43,8 @@
     padding          : 10px;
     background-color : #E1E0E0;
 }
+@media (max-width: 599px) {
+    .widget-container{ 
+        height: auto !important;
+    }
+}
