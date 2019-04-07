@@ -68,24 +68,26 @@
   }
 }
 
+
 @media (max-width: 1022px) {
   .nav-secondary .tagline {
-    position: absolute;
     bottom: 30px;
     right: 24px;
   }
   .nav-secondary .nav-item-donate {
     display: block;
-    margin: 16px 0 24px;
+    margin: 16px 0 0px;
   }
   #nav-container {
     background-color: #FFEDED;
-    padding: 24px;
+    padding: 0px;
     margin-bottom: 16px;
-    /* display: none; */
   }
   #nav-container.show-nav {
     display: block;
+  }
+  #nav-container .social-links{
+    display: none;
   }
 }
 
@@ -95,9 +97,11 @@
 }
 
 .nav-secondary .tagline {
-  font-size: 1rem;
+  text-align: center;
+  font-size: 2rem;
   color: #D73F3F;
   opacity: .85;
+  margin: 20px 0px 20px 9px;
 }
 
 .nav-secondary .nav-item-donate {
