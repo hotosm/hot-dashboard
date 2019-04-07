@@ -74,10 +74,8 @@ class Header extends Component {
     return (
       <header className="header">
         {/* Header from the hotosm website */}
-        <div id = "nav-container"
-             className = "nav-secondary">
-          <a href = "https://www.hotosm.org/donate"
-             className = "nav-item-donate" > Donate </a>
+        <div id = "nav-container" className = "nav-secondary">
+             <h6 className="tagline">Mapping our world together</h6>
           <ul className="social-links">
             <li><a href="https://twitter.com/hotosm">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
@@ -114,7 +112,7 @@ class Header extends Component {
               </svg>
               <span>Instagram</span></a></li>
           </ul>
-          <h6 className="tagline">Mapping our world together</h6>
+          <a href = "https://www.hotosm.org/donate" className = "nav-item-donate" > Donate </a>
         </div>
 
         {/* Header with the project title and project selector */}
